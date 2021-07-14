@@ -4,21 +4,22 @@ import Logo from '../../assets/images/logo.png';
 
 import './styles.scss';
 
+
 export default function Home() {
   const [value, setValue] = useState('');
   const [error, setError] = useState(false);
   const [mailStorage, setMailStorage] = useState([{}])
-  
-  
+
+
   const handleSubmit = () => {
     const mail = [];
     try {
-        const email = { email: value};
-        
-        mail.push(email);     
-        
-        setValue(''); 
-             
+      const email = { email: value };
+
+      mail.push(email);
+
+      setValue('');
+
     } catch (error) {
       setError(true);
       setTimeout(() => {
@@ -27,7 +28,7 @@ export default function Home() {
     }
     setMailStorage(mail)
   }
-  localStorage.setItem('Emails', JSON.stringify(mailStorage));  
+  localStorage.setItem('Emails', JSON.stringify(mailStorage));
 
   return (
     <div className="containerHome">
