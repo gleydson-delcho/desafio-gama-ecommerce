@@ -6,13 +6,28 @@ import './styles.scss';
 
 export default function Home() {
   const [value, setValue] = useState('');
-
+  const [error, setError] = useState(false);
+  const [mailStorage, setMailStorage] = useState([{}])
+  
+  
   const handleSubmit = () => {
-    console.log(value);
-    if (value !== '') {
-      setValue('');
+    const mail = [];
+    try {
+        const email = { email: value};
+        
+        mail.push(email);     
+        
+        setValue(''); 
+             
+    } catch (error) {
+      setError(true);
+      setTimeout(() => {
+        setError(false);
+      }, 3000);
     }
+    setMailStorage(mail)
   }
+  localStorage.setItem('Emails', JSON.stringify(mailStorage));  
 
   return (
     <div className="containerHome">
@@ -31,9 +46,10 @@ export default function Home() {
         <h2>Digite seu melhor e-mail no campo abaixo e receba todas as promoções!</h2>
         <div className="labelForm">
           <label htmlFor="email">E-mail:</label>
-          <input type="text" onChange={e => setValue(e.target.value)} />
+          <input type="text" value={value} onChange={e => setValue(e.target.value)} />
           <button onClick={handleSubmit}>Enviar</button>
         </div>
+        {error && <p><span>Erro:</span>Dados não encontrados</p>}
       </div>
     </div>
   )

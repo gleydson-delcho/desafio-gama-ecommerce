@@ -78,6 +78,18 @@
                 }
 
             }
+
+            p {
+                display: block;
+                font-size: 0.8rem;
+                color: #eb1e1e;
+                font-weight: 600;
+                span {
+                    margin: 0.4rem;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
         }
 
     }
@@ -86,9 +98,16 @@
 @media(max-width: 855px) {
     .containerHome {
         header {
+            justify-content: center;
+
+
             white-space: nowrap;
             overflow: hidden;
-            width: 100%;
+            width: auto;
+
+            h2 {
+                font-size: 0.8rem;
+            }
 
             img {
                 display: none;                
@@ -97,12 +116,12 @@
 
         .containerInfo {
 
-            width: 100%;
+            width: auto;
         }
 
         .containerForm {
 
-            width: 100%;
+            width: auto;
 
             background: none;
             text-align: justify;
