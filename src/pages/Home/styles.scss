@@ -2,7 +2,7 @@
     header {
         display: flex;
         padding: 1rem;
-        margin: 2rem;
+        margin: 2rem 1rem 2rem 2rem;
         border-radius: 0.2rem;
 
         background: linear-gradient(to right,  #f73d0e, #242423);
@@ -18,15 +18,103 @@
         align-items: center;
         justify-content: center;
 
+        
         text-align: justify;
-
-        margin: 0 5rem 5rem  0;
-
+        
+        margin: 0 0 2rem 5rem;
+        
         p {
             max-width: 300px;
         }
+    }
+    
+    .containerForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        background: #242423;
+        padding: 1rem;
+        margin:0 2rem 0 2rem;
+        border-radius: 1rem;
 
-        
-        
+        font-size: 1.4rem;
+
+        .labelForm {
+            display: flex;
+            align-items: center;
+            font-size: 2.75rem;
+
+            input {
+                width: 20rem;
+                height: 2rem;
+                margin: 0 2rem;
+                border-radius: 0.5rem;
+
+                &:focus,
+                &:active {
+                outline: none;
+                box-shadow: none;
+            }
+            }
+
+            button {
+                width: 8rem;
+                height: 2.4rem;
+
+                font-size: 1rem;
+                font-weight: 700;
+
+                background: #f73d0e;
+                border-radius: 1rem;
+                border: 1px solid #fff;
+                transition: filter 0.4s;
+                
+                &:hover {
+                    cursor: pointer;
+                    border: 1px solid #d4d4d4;
+                    filter: brightness(0.7);                    
+                }
+
+            }
+        }
+
+    }
+}
+
+@media(max-width: 855px) {
+    .containerHome {
+        header {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+
+            img {
+                display: none;                
+            }
+        }
+
+        .containerInfo {
+
+            width: 100%;
+        }
+
+        .containerForm {
+
+            width: 100%;
+
+            background: none;
+            text-align: justify;
+    
+            .labelForm {
+                display: flex;
+                flex-direction: column;
+    
+                input {
+                    margin: 1rem 0;
+                }
+            }
+        }        
     }
 }

@@ -15,24 +15,26 @@ export default function Home() {
   }
 
   return (
-      <div className="containerHome">
-        <header>
-          <img src={Logo} alt="logoImage" />
-          <h2>Preparem-se para as maiores  ofertas do mercado</h2>
-        </header>
-        <div className="containerInfo" >
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum magna augue,
-            nec interdum leo pharetra ac. Vestibulum arcu mi, rutrum eget consequat vel, rhoncus ut lorem!
-          </p>
-          <CountDown />
-        </div>
-        <div className="containerForm">
-          <h2>Digite seu melhor e-mail no campo abaixo e receba todas as promoções!</h2>
+    <div className="containerHome">
+      <header>
+        <img src={Logo} alt="logoImage" />
+        <h2>Preparem-se para as maiores  ofertas do mercado</h2>
+      </header>
+      <div className="containerInfo" >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum magna augue,
+          nec interdum leo pharetra ac. Vestibulum arcu mi, rutrum eget consequat vel, rhoncus ut lorem!
+        </p>
+        <CountDown />
+      </div>
+      <div className="containerForm">
+        <h2>Digite seu melhor e-mail no campo abaixo e receba todas as promoções!</h2>
+        <div className="labelForm">
           <label htmlFor="email">E-mail:</label>
           <input type="text" onChange={e => setValue(e.target.value)} />
           <button onClick={handleSubmit}>Enviar</button>
         </div>
       </div>
+    </div>
   )
 }
