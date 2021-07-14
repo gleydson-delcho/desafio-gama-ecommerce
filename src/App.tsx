@@ -1,9 +1,17 @@
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import CountDownProvider from "./contexts/CountDownContext";
+import Home from "./pages/Home";
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>Home</h1>
-    </div>
+    <CountDownProvider>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path='/' component={Home} />
+        </Switch>
+      </BrowserRouter>
+    </CountDownProvider>
   );
 }
 

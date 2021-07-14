@@ -5,7 +5,6 @@
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 
@@ -35,10 +34,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O desafio consiste em uma aplicação de onde será apresentada uma landing page sobre o dia promocional de uma loja ecommerce contendo um espaço para cadastro de um e-mail em que o usuário receberá todas as informações sobre o grande dia promocional.
 Se desejar você pode utilizar a aplicação através [desse link](ainda-nao-disponível).
-
-## 🔖 Layout
-
-Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/u0BQK8rCf2KgzcukdRRCWh/Letmeask/duplicate). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 ## :memo: Licença
 

@@ -1,0 +1,32 @@
+.containerHome {
+    header {
+        display: flex;
+        padding: 1rem;
+        margin: 2rem;
+        border-radius: 0.2rem;
+
+        background: linear-gradient(to right,  #f73d0e, #242423);
+        img {
+            width: 15rem;
+            height: 5rem;
+            margin-right: 1rem;
+        }
+    }
+
+    .containerInfo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: justify;
+
+        margin: 0 5rem 5rem  0;
+
+        p {
+            max-width: 300px;
+        }
+
+        
+        
+    }
+}
