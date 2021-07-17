@@ -17,7 +17,7 @@
 <br>
 
 <p align="center">
-  <img alt="ecommerce" src=".github/assets/images/landing.jpg" width="100%" borderRadius="10%">
+  <img alt="ecommerce" src=".github/images/landing.jpg" width="100%" borderRadius="10%">
 </p>
 
 ## 🚀 Tecnologias
