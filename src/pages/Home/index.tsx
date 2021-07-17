@@ -4,6 +4,7 @@ import Logo from '../../assets/images/logo.png';
 import { FaFacebookSquare, FaInstagram, FaTwitter } from 'react-icons/fa'
 
 import './styles.scss';
+import Footer from "../../components/Footer";
 
 
 export default function Home() {
@@ -64,6 +65,7 @@ export default function Home() {
         <span><a href="/"><FaInstagram color="#dd2a7b" size="30" /></a></span>
         <span><a href="/"><FaTwitter color="#3b5998" size="30" /></a></span>
       </div>
+      <Footer />      
     </div>
   )
 }

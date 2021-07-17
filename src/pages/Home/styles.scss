@@ -131,6 +131,12 @@
 @media(max-width: 855px) {
     .containerHome {
 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 1.4rem;
+
         header {
 
             justify-content: center;
@@ -183,4 +189,6 @@
             
         }
     }
+
+    
 }
