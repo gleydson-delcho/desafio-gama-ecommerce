@@ -9,23 +9,30 @@ import './styles.scss';
 export default function Home() {
   const [value, setValue] = useState('');
   const [error, setError] = useState(false);
-  const parseData = JSON.parse(String(localStorage.getItem('Emails'))) || []  
+  const [success, setSuccess] = useState(false);
+  const parseData = JSON.parse(String(localStorage.getItem('Emails'))) || []
   
-  const handleSubmit = () => {
-    try {
-      const email = { email: value };
-      
-      parseData.push(email);
-      console.log(parseData);
-      
-      localStorage.setItem('Emails', JSON.stringify(parseData));
-      setValue('');
+  const handleSubmit = () => {    
 
-    } catch (error) {
+    if (value.trim() === '' || !value.match(/^[a-zA-Z0-9.-_]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
       setError(true);
       setTimeout(() => {
         setError(false);
       }, 3000);
+    }else{
+
+      const email = { email: value };
+  
+      parseData.push(email);
+      console.log(parseData);
+  
+      setSuccess(true);
+      setTimeout(() => {
+        setSuccess(false);
+      }, 3000);
+  
+      localStorage.setItem('Emails', JSON.stringify(parseData));
+      setValue('');
     }
   }
 
@@ -49,7 +56,8 @@ export default function Home() {
           <input type="text" value={value} onChange={e => setValue(e.target.value)} />
           <button onClick={handleSubmit}>Enviar</button>
         </div>
-        {error && <p><span>Erro:</span>Dados não encontrados</p>}
+        {error && <p className="error"><span>Erro:</span> Preencha com um email válido!</p>}
+        {success && <p className="success">Dados salvos com sucesso!</p>}
       </div>
       <div className="icons">
         <span><a href="/"><FaFacebookSquare color="#3b5998" size="30" /></a></span>

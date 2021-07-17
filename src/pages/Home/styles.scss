@@ -47,6 +47,34 @@
         border-radius: 1rem;
         font-size: 1.4rem;
 
+        .error {
+
+            display: block;
+            font-size: 0.8rem;
+            color: #eb1e1e;
+            font-weight: 600;
+            span {
+
+                margin: 0.4rem;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+
+        .success {
+
+            display: block;
+            font-size: 0.8rem;
+            color: #2ed42e;
+            font-weight: 600;
+            span {
+
+                margin: 0.4rem;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+
         .labelForm {
 
             display: flex;
@@ -85,19 +113,7 @@
                     filter: brightness(0.7);                    
                 }
             }
-            p {
-
-                display: block;
-                font-size: 0.8rem;
-                color: #eb1e1e;
-                font-weight: 600;
-                span {
-
-                    margin: 0.4rem;
-                    font-size: 1rem;
-                    font-weight: bold;
-                }
-            }
+            
         }
     }
 
