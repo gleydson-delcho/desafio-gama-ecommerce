@@ -17,7 +17,7 @@
 <br>
 
 <p align="center">
-  <img alt="ecommerce" src=".github/assets/images/landing.png" width="100%" borderRadius="10%">
+  <img alt="ecommerce" src=".github/assets/images/landing.jpg" width="100%" borderRadius="10%">
 </p>
 
 ## 🚀 Tecnologias
@@ -33,7 +33,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 
 O desafio consiste em uma aplicação de onde será apresentada uma landing page sobre o dia promocional de uma loja ecommerce contendo um espaço para cadastro de um e-mail em que o usuário receberá todas as informações sobre o grande dia promocional.
-Se desejar você pode utilizar a aplicação através [desse link](ainda-nao-disponível).
+Se desejar você pode utilizar a aplicação através [desse link](https://desafio-landingpage.netlify.app/).
 
 ## :memo: Licença
 
