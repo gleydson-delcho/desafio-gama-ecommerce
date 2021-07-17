@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { CountDown } from "../../components/CountDown";
 import Logo from '../../assets/images/logo.png';
-
 import { FaFacebookSquare, FaInstagram, FaTwitter } from 'react-icons/fa'
+
 import './styles.scss';
 
 
