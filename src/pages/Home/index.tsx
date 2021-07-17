@@ -2,22 +2,23 @@ import { useState } from "react";
 import { CountDown } from "../../components/CountDown";
 import Logo from '../../assets/images/logo.png';
 
+import { FaFacebookSquare, FaInstagram, FaTwitter } from 'react-icons/fa'
 import './styles.scss';
 
 
 export default function Home() {
   const [value, setValue] = useState('');
   const [error, setError] = useState(false);
-  const [mailStorage, setMailStorage] = useState([{}])
-
-
+  const parseData = JSON.parse(String(localStorage.getItem('Emails'))) || []  
+  
   const handleSubmit = () => {
-    const mail = [];
     try {
       const email = { email: value };
-
-      mail.push(email);
-
+      
+      parseData.push(email);
+      console.log(parseData);
+      
+      localStorage.setItem('Emails', JSON.stringify(parseData));
       setValue('');
 
     } catch (error) {
@@ -26,9 +27,7 @@ export default function Home() {
         setError(false);
       }, 3000);
     }
-    setMailStorage(mail)
   }
-  localStorage.setItem('Emails', JSON.stringify(mailStorage));
 
   return (
     <div className="containerHome">
@@ -51,6 +50,11 @@ export default function Home() {
           <button onClick={handleSubmit}>Enviar</button>
         </div>
         {error && <p><span>Erro:</span>Dados não encontrados</p>}
+      </div>
+      <div className="icons">
+        <span><a href="/"><FaFacebookSquare color="#3b5998" size="30" /></a></span>
+        <span><a href="/"><FaInstagram color="#dd2a7b" size="30" /></a></span>
+        <span><a href="/"><FaTwitter color="#3b5998" size="30" /></a></span>
       </div>
     </div>
   )
